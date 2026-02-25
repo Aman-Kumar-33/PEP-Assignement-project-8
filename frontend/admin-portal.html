@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal Admin Console</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .admin-header {
+        background: #0f172a;
+        color: white;
+        padding: 20px 0;
+        margin-bottom: 40px;
+      }
+      .status-pill {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+      .pending {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .confirmed {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      .cancelled {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+      .admin-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .admin-table th,
+      .admin-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+      .admin-table th {
+        background: #f8fafc;
+        color: #64748b;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+      }
+      .action-btns {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin-header">
+      <div class="container">
+        <h1>System Administration</h1>
+        <p style="opacity: 0.7">Confidential: Booking Management Engine</p>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="card">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+          "
+        >
+          <h2>All System Bookings</h2>
+          <button onclick="loadAllBookings()" class="btn-outline">
+            🔄 Refresh Data
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Service</th>
+              <th>Time Slot</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-booking-rows"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>

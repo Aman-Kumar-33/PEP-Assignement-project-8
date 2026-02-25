@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Booking System</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container nav-content">
+          <div class="logo">Book<span>It</span></div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">My Bookings</a></li>
+            <li id="auth-buttons">
+              <a href="login.html" class="btn-outline">Login</a>
+              <a href="register.html" class="btn-primary">Sign Up</a>
+            </li>
+            <li id="user-profile" style="display: none">
+              <button onclick="logout()" class="btn-logout">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Find and Book Expert Services</h1>
+        <p>
+          From tutoring to home repair, book your next appointment in seconds.
+        </p>
+      </section>
+
+      <section class="container">
+        <h2>Available Services</h2>
+        <div id="services-grid" class="grid">
+          <p>Loading services...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
